@@ -4,7 +4,7 @@
 
 <hr>
 
-<form action="/insert_course" method="post">
+<form action="/insert_course" method="get">
   <div>
     <label for="title_box">
       Title
@@ -64,7 +64,7 @@
     </th>
   </tr>
 
-  <% @course.each do |course| %>
+  <% @courses.each do |course| %>
     <tr>
       <td>
         <%= course.id %>
