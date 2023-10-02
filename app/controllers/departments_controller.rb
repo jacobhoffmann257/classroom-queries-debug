@@ -28,7 +28,7 @@ class DepartmentsController < ApplicationController
     the_id = params.fetch("path_id")
     @department = Department.where({ :id => the_id }).at(0)
 
-    @department.name = params.fetch("query_name")
+    @department.name = params.fetch("query_term")
 
     if @department.valid?
       @department.save
